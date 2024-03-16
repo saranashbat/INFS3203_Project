@@ -1,27 +1,22 @@
 # INFS3203_Project
 
 **Introduction**
-Introduction
 This section will be introduction of our exciting job project, where we aim to provide exceptional culinary experiences for a variety of Alumni and students to find the perfect job that suites their needs and their majors. 
 Aligned with the pillars of Qatar National Development Strategy, our job project aims to revolutionize the way Alumni experience and access job finding services in Qatar. By providing a centralized platform that brings together a diverse range of work combines, we offer convenience, choice, and customization for alumni to find the perfect job this job can be hybrid, fully remote, and traditional in-person rolesin the country.
 
-Qatar National Development Strategy
+**Qatar National Development Strategy**
 The job project aligns with Qatar National Development Strategy by promoting economic diversification, supporting tourism and preserving cultural heritage, embracing innovation and technology, and fostering human development. By addressing key aspects of the vision, the project contributes to Qatar's overall progress and sustainable development goals outlined in the national Qatar National Development Strategy.
 
 
-
-**Selected Goal(s) from Qatar NDS**
-Clearly state which of the 7 strategic goals of the Qatar NDS you've chosen to focus on.
-
 **Identification of Need**
 
-Describe the specific societal, economic, or environmental need within the context of the selected goal(s).
+As a students after graduation we need to start searching for jobs by asking friends families and start searching all over the internet this can take years to find the needed job so instead we can open an app that combines all the companies together with different aspects and majors to cover all the alumni needs.
+
 
 **Project Proposal**
 
-Present the proposal for a simple app that addresses the identified need.
-Include details such as the app's features, target audience, and how it will fulfill the identified need.
-Explain how the proposed app aligns with the national development strategy.
+The project proposal mainly will present and address the problem that as an alumni students we face after graduting which is searching for a job , this brings up to a job app that containes a verity of jobs with infromation about each job such as how many years of experince? Is the work hybrid, fully remote, and traditional in-person? Some companies will provide the salary and others will not , Information about the type of work and the requirment, this makes it esier for the alumni to read more and apply for the needed job without contacting every single company. Futhermore, the issue that this project is solving will align with Qatar national development strategy by by promoting economic diversification, supporting tourism and preserving cultural heritage.The app features maily will be viewing the job description , applying to a specific job. The targeted audience will be alumni students that have graduated newly or even before.
+
 
 **Potential Impact**
 
