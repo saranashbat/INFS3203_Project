@@ -1,10 +1,12 @@
 # INFS3203_Project
 
 **Introduction**
+
 This section will be introduction of our exciting job project, where we aim to provide exceptional culinary experiences for a variety of Alumni and students to find the perfect job that suites their needs and their majors. 
 Aligned with the pillars of Qatar National Development Strategy, our job project aims to revolutionize the way Alumni experience and access job finding services in Qatar. By providing a centralized platform that brings together a diverse range of work combines, we offer convenience, choice, and customization for alumni to find the perfect job this job can be hybrid, fully remote, and traditional in-person rolesin the country.
 
 **Qatar National Development Strategy**
+
 The job project aligns with Qatar National Development Strategy by promoting economic diversification, supporting tourism and preserving cultural heritage, embracing innovation and technology, and fostering human development. By addressing key aspects of the vision, the project contributes to Qatar's overall progress and sustainable development goals outlined in the national Qatar National Development Strategy.
 
 
