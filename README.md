@@ -32,7 +32,7 @@ Week 3: Implementation – Part 2  | Due date: 02/04
 
 Week 4: CI/CD pipeline | Due date: 09/04
 
-*Lay out requirements*
+*Requirements*
 
 For this project, Flask will be used as the web development framework, while HTML and CSS will be used for frontend development. This project will not use a database and will not involve integration from external resources.
 
@@ -42,4 +42,4 @@ The following is an outline of the tools that will be utilized for this project:
 - Netlify: tool for hosting sites.
 
 Conclusion:
-Summarize the key points of the project plan and emphasize the importance of its alignment with Qatar NDS goals.
+This project proposal presents a viable solution to streamline the job search process in Qatar through the development of a user-friendly job search application. By utilizing Flask for web development and tools like Figma for design, we aim to create an accessible platform that provides comprehensive job information to users without the need for database integration. This project aligns closely with Qatar's National Development Strategy, particularly Goal 3: Future-ready Workforce, as it facilitates access to employment opportunities and empowers individuals with essential information to enhance their employability. Through collaborative efforts and adherence to the outlined project plan, we anticipate making a significant impact on Qatar's job market landscape, fostering economic growth and social development in the process.
