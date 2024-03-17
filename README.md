@@ -2,18 +2,16 @@
 
 **Introduction**
 
-This section will be introduction of our exciting job project, where we aim to provide exceptional culinary experiences for a variety of Alumni and students to find the perfect job that suites their needs and their majors. 
-Aligned with the pillars of Qatar National Development Strategy, our job project aims to revolutionize the way Alumni experience and access job finding services in Qatar. By providing a centralized platform that brings together a diverse range of work combines, we offer convenience, choice, and customization for alumni to find the perfect job this job can be hybrid, fully remote, and traditional in-person rolesin the country.
+In response to the evolving needs of Qatar's job market and the goals outlined in the Qatar National Development Strategy (QNDS), this project aims to address the challenges individuals face when seeking employment opportunities in the country. With a focus on streamlining the job search process and empowering individuals with the necessary tools and information, this project proposes the development of a user-friendly job search application. This application aims to provide comprehensive job listings, essential qualifications, and relevant company information, thereby facilitating efficient job matching and fostering workforce advancement. This project seeks to make a meaningful contribution to Qatar's economic growth and development objectives, ultimately shaping a future-ready workforce and supporting the nation's journey towards prosperity.
 
 **Qatar National Development Strategy**
 
-The job project aligns with Qatar National Development Strategy by promoting economic diversification, supporting tourism and preserving cultural heritage, embracing innovation and technology, and fostering human development. By addressing key aspects of the vision, the project contributes to Qatar's overall progress and sustainable development goals outlined in the national Qatar National Development Strategy.
+This project directly addresses a need identified by the Qatar National Development Strategy, which is fostering a future-ready workforce and advancing economic diversification. By providing a centralized platform for job seekers to access information on available employment opportunities, required qualifications, and relevant companies, this project aims to streamline the job search process. This initiative aligns closely with the QNDS goals of promoting economic growth and development by empowering individuals with the tools and resources necessary to secure suitable employment. Additionally, by facilitating efficient job matching and fostering workforce advancement, our project contributes to the broader objectives outlined in the QNDS, ultimately supporting Qatar's vision of sustainable growth and prosperity.
 
 
 **Identification of Need**
 
-As a students after graduation we need to start searching for jobs by asking friends families and start searching all over the internet this can take years to find the needed job so instead we can open an app that combines all the companies together with different aspects and majors to cover all the alumni needs.
-
+In Qatar's rapidly evolving job market, individuals often face challenges when searching for available employment opportunities. With the country's goals of economic growth and development outlined in the Qatar National Development Strategy, there is a need to simplify the job search process and provide individuals with the necessary tools and information to secure suitable employment. Many job seekers struggle to find relevant job listings, understand the required skills and qualifications, and identify potential employers in their desired field. This highlights the need for a user-friendly job search platform that provides comprehensive information on job categories, required skills, and relevant companies, thereby facilitating the job search process and fostering workforce advancement in alignment with Qatar's development objectives.
 
 **Project Proposal**
 
