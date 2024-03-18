@@ -1,6 +1,7 @@
 # INFS3203_Project
 
 **Link to Project Prototype on Figma:**
+
 https://www.figma.com/file/QBcANWzDcdJ6vNhlMDUNWC/INFS3203_Project?type=design&node-id=0%3A1&mode=design&t=KCPAlyCaJAqWAnMu-1
 
 **Introduction**
