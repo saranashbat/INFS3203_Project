@@ -1,5 +1,8 @@
 # INFS3203_Project
 
+**Link to Project Prototype on Figma:**
+https://www.figma.com/file/QBcANWzDcdJ6vNhlMDUNWC/INFS3203_Project?type=design&node-id=0%3A1&mode=design&t=KCPAlyCaJAqWAnMu-1
+
 **Introduction**
 
 In response to Qatar's evolving job market and the goals outlined in the Qatar National Development Strategy (QNDS), this project aims to address the challenges individuals face when seeking employment opportunities in the country. With a focus on streamlining the job search process and providing individuals with the necessary tools and information, this project proposes the development of a user-friendly job search application. This application aims to provide comprehensive job listings, essential qualifications, and relevant company information, thereby facilitating efficient job matching and fostering workforce advancement. This project seeks to make a meaningful contribution to Qatar's economic growth and development objectives, ultimately shaping a future-ready workforce and supporting the nation's journey towards prosperity.
