@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Analyst</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        .profile-image {
+            width: 75px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .heading {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .sub-heading {
+            font-size: 18px;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        .job-description {
+            margin-bottom: 20px;
+        }
+
+        .job-description h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .job-description p {
+            margin-bottom: 10px;
+        }
+
+        .apply-form {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 100px;
+        }
+
+        .apply-form input[type="text"],
+        .apply-form input[type="email"],
+        .apply-form input[type="tel"],
+        .apply-form textarea,
+        .apply-form input[type="file"],
+        .apply-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .apply-form input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .apply-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        .link {
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            margin-right: 30px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="/static/logo.jpg" alt="QCareers Logo" class="logo">
+        <div>
+            <a class="link" href="/">Home</a>
+            <a class="link">Sign Out</a>
+            <img src="/static/profile.png" alt="Profile Image" class="profile-image">
+
+        </div>
+    </div>
+
+    <div class="content">
+        <h1 class="heading">Cybersecurity Analyst</h1>
+        <h2 class="sub-heading">Security Solutions LLC</h2>
+
+        <div class="job-description">
+            <h3>Job Description</h3>
+            <p>As a Cybersecurity Analyst at Security Solutions LLC, you will play a critical role in protecting our computer systems and networks from cyber threats and attacks. Your responsibilities will include:</p>
+            <ul>
+                <li>Implementing and maintaining security measures and protocols to safeguard information systems and data</li>
+                <li>Monitoring network traffic for potential security breaches and investigating security incidents</li>
+                <li>Conducting vulnerability assessments and penetration testing to identify and address security vulnerabilities</li>
+                <li>Developing and implementing security policies and procedures</li>
+                <li>Responding to security incidents and providing incident response support</li>
+                <li>Collaborating with other IT teams to ensure the security of our infrastructure and applications</li>
+            </ul>
+            <p>For more information about Security Solutions LLC, please visit <a href="">Security Solutions LLC</a>.</p>
+        </div>
+
+        <div class="apply-form">
+            <h3>Apply for this Job</h3>
+            <form action="#" method="post">
+                <input type="text" name="first_name" placeholder="First Name" required>
+                <input type="text" name="last_name" placeholder="Last Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                <input type="text" name="location" placeholder="Your Location" required>
+                <br>
+                <br>
+                <label >Upload CV: <br><br><input type="file" name="cv" accept=".pdf,.doc,.docx" required></label>
+                <br>
+                <br>
+                
+                <button type="submit">Apply</button>
+            </form>
+        </div>
+    
+        <div class="footer">
+            &copy; 2024 QCareers
+        </div>
+    </body>
+    
+    </html>
