@@ -37,3 +37,17 @@ jobs:
           echo "Failed to start the application"
           exit 1
         fi
+  cleanup:
+      runs-on: ubuntu-latest
+      needs: [build]
+  
+      steps:
+      - name: Stop Gunicorn
+        run: |
+          PID=$(pgrep gunicorn)
+          if [ -n "$PID" ]; then
+            kill "$PID"
+            echo "Gunicorn process stopped."
+          else
+            echo "No Gunicorn process running."
+          fi
