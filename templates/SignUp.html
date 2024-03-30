@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QCareers - Find Your Dream Job in Qatar</title>
+    <title>Sign Up - Security Solutions LLC</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -27,12 +27,6 @@
             height: auto;
         }
 
-        .profile-image {
-            width: 75px;
-            height: auto;
-            border-radius: 50%;
-        }
-
         .content {
             padding: 20px;
         }
@@ -49,16 +43,36 @@
             margin-bottom: 20px;
         }
 
-        .category {
-            width: 30%;
+        .signup-form {
+            background-color: #fff;
             border: 1px solid #dee2e6;
             border-radius: 5px;
             padding: 20px;
-            margin-right: 20px;
-            margin-bottom: 20px;
-            display: inline-block;
+            margin-bottom: 100px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .signup-form input[type="text"],
+        .signup-form input[type="password"],
+        .signup-form input[type="email"],
+        .signup-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
             box-sizing: border-box;
-            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .signup-form input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .signup-form input[type="submit"]:hover {
+            background-color: #0056b3;
         }
 
         .footer {
@@ -83,45 +97,22 @@
 <body>
     <div class="navbar">
         <img src="/static/logo.jpg" alt="QCareers Logo" class="logo">
-       
         <div>
             <a class="link" href="/">Home</a>
-            
-            <a class="link" href="/login">login</a>
-            <!-- <div>
-                {% if logged_in %}
-                    <a class="link" href="/SignUp">Sign Out</a>
-                {% else %}
-                    <a class="link" href="/SignUp">Sign Up</a>
-                {% endif %}
-            </div> -->
-            <img src="/static/profile.png" alt="Profile Image" class="profile-image">
         </div>
-
     </div>
 
     <div class="content">
-        <h1 class="heading">QCareers</h1>
-        <h2 class="sub-heading">Find your dream job in Qatar today</h2>
-        <h3>Job Categories</h3>
+        <h1 class="heading">Sign Up - Security Solutions LLC</h1>
 
-        <div class="category">
-            <h3>Information Technology</h3>
-            <p>Find Information Technology Jobs Today</p>
-            <a href="/infotechjobs"><button>Click Here</button></a>
-        </div>
-
-        <div class="category">
-            <h3>Category 2</h3>
-            <p>Description of Category 2</p>
-            <button>Click Here</button>
-        </div>
-
-        <div class="category">
-            <h3>Category 3</h3>
-            <p>Description of Category 3</p>
-            <button>Click Here</button>
-
+        <div class="SignUp-form">
+            <form action="/SignUp" method="post">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="fullname" placeholder="Full Name" required>
+                <button type="submit">Sign Up</button>
+            </form>
         </div>
     </div>
 
