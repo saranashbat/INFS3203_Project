@@ -87,17 +87,14 @@
         <div>
             <a class="link" href="/">Home</a>
             
-            <a class="link" href="/login">login</a>
-            <!-- <div>
-                {% if logged_in %}
-                    <a class="link" href="/SignUp">Sign Out</a>
-                {% else %}
-                    <a class="link" href="/SignUp">Sign Up</a>
-                {% endif %}
-            </div> -->
+            {% if current_user.is_authenticated %}
+                <a class="link" href="/logout">Sign Out</a>
+                <a class="link" href="/profile">Welcome</a>
+            {% else %}
+                <a class="link" href="/login">Login</a>
+            {% endif %}
             <img src="/static/profile.png" alt="Profile Image" class="profile-image">
         </div>
-
     </div>
 
     <div class="content">
@@ -121,7 +118,6 @@
             <h3>Category 3</h3>
             <p>Description of Category 3</p>
             <button>Click Here</button>
-
         </div>
     </div>
 
