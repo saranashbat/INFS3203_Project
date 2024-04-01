@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for
-from flask_login import LoginManager, UserMixin, login_user, login_required
+from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 
 app = Flask(__name__)
-app.secret_key = '1234' 
+app.secret_key = '1234'
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -12,7 +12,7 @@ class User(UserMixin):
     def __init__(self, id):
         self.id = id
 
-users = {'user_id': User('user_id')}  # Replace 'user_id' with your actual user ID
+users = {'user': User('user')}  
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -27,12 +27,27 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        # Mock authentication - Replace with your actual authentication logic
-        if username == 'user' and password == 'password':
-            user = User(username)
+        if username in users and password == 'password':
+            user = users[username]
             login_user(user)
             return redirect(url_for('home'))
     return render_template('login.html')
+
+@app.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('home'))
+
+@app.route('/profile')
+@login_required
+def profile():
+    user_info = {
+        'username': current_user.id, 
+        'email': 'user@user.com',  
+        'fullname': 'user'         
+    }
+    return render_template('profile.html', user_info=user_info)
 
 @app.route('/SignUp', methods=['GET', 'POST'])  
 def SignUp():
@@ -42,7 +57,7 @@ def SignUp():
         email = request.form['email']
         fullname = request.form['fullname']
         # Process sign up data here
-        return render_template('index.html')
+        return redirect(url_for('home'))
     else:
         return render_template('SignUp.html')
 
