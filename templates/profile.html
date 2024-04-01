@@ -59,6 +59,10 @@
         .logout {
             float: right;
         }
+
+        #profileForm {
+            display: none;
+        }
     </style>
 </head>
 
@@ -71,7 +75,7 @@
             <p><strong>Full Name:</strong> <input type="text" id="fullname" name="fullname" value="{{ user_info.fullname }}" readonly></p>
         </div>
         <button id="editBtn" onclick="editProfile()">Edit Profile</button>
-        <form id="profileForm" style="display: none;">
+        <form id="profileForm" onsubmit="return false;">
             <label for="new_username">Username:</label>
             <input type="text" id="new_username" name="new_username" value="{{ user_info.username }}">
             <label for="new_email">Email:</label>
@@ -79,7 +83,7 @@
             <label for="new_fullname">Full Name:</label>
             <input type="text" id="new_fullname" name="new_fullname" value="{{ user_info.fullname }}">
             <button type="button" onclick="cancelEdit()">Cancel</button>
-            <button type="submit">Update Profile</button>
+            <button type="submit" onclick="updateProfile()">Update Profile</button>
         </form>
         <button class="logout" onclick="logout()">Logout</button>
     </div>
@@ -99,6 +103,13 @@
             document.getElementById("username").readOnly = true;
             document.getElementById("email").readOnly = true;
             document.getElementById("fullname").readOnly = true;
+        }
+
+        function updateProfile() {
+            // Perform AJAX request to update profile
+            // For demonstration purposes, let's just alert a message
+            alert("Profile updated successfully!");
+            cancelEdit(); // Hide the form after updating
         }
 
         function logout() {
