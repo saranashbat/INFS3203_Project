@@ -1,81 +1,46 @@
-from flask import Flask, render_template, request, redirect, url_for
-from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
+import unittest
+from app import app
+from flask_login import login_user
 
-app = Flask(__name__)
-app.secret_key = ''
+class TestAppRoutes(unittest.TestCase):
 
-login_manager = LoginManager()
-login_manager.init_app(app)
+    def setUp(self):
+        self.app = app.test_client()
 
-class User(UserMixin):
-    def __init__(self, id, email, fullname):
-        self.id = id
-        self.email = email
-        self.fullname = fullname
+    def test_login_page_route(self):
+        response = self.app.get('/login')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Login - Security Solutions LLC', response.data)
 
-users = {'user': User('user', 'user@user.com', 'user')}  
+    def test_SignUp_page_route(self):  
+        response = self.app.get('/SignUp')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Sign Up - Security Solutions LLC', response.data)
 
-@login_manager.user_loader
-def load_user(user_id):
-    return users.get(user_id)
+    def test_home_route(self):
+        response = self.app.get('/')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'QCareers', response.data)
 
-@app.route('/')
-def home():
-    return render_template('index.html')
+    def test_infotechjobs_route(self):
+        response = self.app.get('/infotechjobs')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Information Technology', response.data)
 
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        if username in users and password == 'password':
-            user = users[username]
-            login_user(user)
-            return redirect(url_for('home'))
-    return render_template('login.html')
+    def test_infotechjob1_route(self):
+        response = self.app.get('/infotechjob1')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'Cybersecurity', response.data)
 
-@app.route('/logout')
-@login_required
-def logout():
-    logout_user()
-    return redirect(url_for('home'))
-
-@app.route('/profile', methods=['GET', 'POST'])
-@login_required
-def profile():
-    if request.method == 'POST':
-        # Update user profile here
-        current_user.email = request.form['new_email']
-        current_user.fullname = request.form['new_fullname']
-        return redirect(url_for('profile'))
-    user_info = {
-        'username': current_user.id, 
-        'email': current_user.email,  
-        'fullname': current_user.fullname         
-    }
-    return render_template('profile.html', user_info=user_info)
-
-@app.route('/SignUp', methods=['GET', 'POST'])  
-def SignUp():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-        email = request.form['email']
-        fullname = request.form['fullname']
-        # Process sign up data here
-        return redirect(url_for('home'))
-    else:
-        return render_template('SignUp.html')
-
-@app.route('/infotechjobs')
-@login_required
-def infoTechJobs():
-    return render_template('infotechjobs.html')
-
-@app.route('/infotechjob1')
-@login_required
-def infoTechJob1():
-    return render_template('infotechjob1.html')
+    def test_profile_route_authenticated(self):
+        # Simulate a logged-in user session
+        with self.app as c:
+            with c.session_transaction() as sess:
+                sess['_user_id'] = 'example_user'  # Simulate the user ID in the session
+        # Access the profile route
+        response = self.app.get('/profile')
+        self.assertEqual(response.status_code, 200)
+        self.assertIn(b'User Profile', response.data)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    unittest.main()
