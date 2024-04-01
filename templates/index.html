@@ -89,11 +89,13 @@
             
             {% if current_user.is_authenticated %}
                 <a class="link" href="/logout">Sign Out</a>
-                <a class="link" href="/profile">Welcome</a>
+                <a class="link" href="/profile">Profile</a>
             {% else %}
                 <a class="link" href="/login">Login</a>
             {% endif %}
-            <img src="/static/profile.png" alt="Profile Image" class="profile-image">
+            <a href="/profile">
+                <img src="/static/profile.png" alt="Profile Image" class="profile-image">
+            </a>
         </div>
     </div>
 
