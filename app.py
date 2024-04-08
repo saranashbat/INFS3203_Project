@@ -12,6 +12,13 @@ class User:
         self.username = username
         self.email = email
         self.fullname = fullname
+    
+    def is_active(self):
+        # For simplicity, assuming all users are active.
+        return True
+    
+    def get_id(self):
+        return str(self.id)
 
 users = {'example_user': User('1', 'example_user', 'example@example.com', 'Example User')}
 
