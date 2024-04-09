@@ -87,15 +87,14 @@
         <div>
             <a class="link" href="/">Home</a>
             
-            {% if current_user.is_authenticated %}
+            {% if session['username'] %}
                 <a class="link" href="/logout">Sign Out</a>
-                <a class="link" href="/profile">Profile</a>
             {% else %}
                 <a class="link" href="/login">Login</a>
             {% endif %}
-            <a href="/profile">
-                <img src="/static/profile.png" alt="Profile Image" class="profile-image">
-            </a>
+            
+            <img src="/static/profile.png" alt="Profile Image" class="profile-image">
+            
         </div>
     </div>
 

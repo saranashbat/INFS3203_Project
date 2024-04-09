@@ -85,7 +85,13 @@
         <img src="/static/logo.jpg" alt="QCareers Logo" class="logo">
         <div>
             <a class="link" href="/">Home</a>
-            <a class="link">Sign Out</a>
+            
+            {% if session['username'] %}
+                <a class="link" href="/logout">Sign Out</a>
+            {% else %}
+                <a class="link" href="/login">Login</a>
+            {% endif %}
+
             <img src="/static/profile.png" alt="Profile Image" class="profile-image">
 
         </div>
