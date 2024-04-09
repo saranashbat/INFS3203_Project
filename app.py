@@ -3,13 +3,11 @@ from flask_login import LoginManager, current_user, login_user, login_required, 
 import json
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Add a secret key for session security
+app.secret_key = 'your_secret_key'  
 login_manager = LoginManager(app)
 
-# File to store user data
 USERS_FILE = 'users.json'
 
-# Mock user database
 class User:
     def __init__(self, id, username, email, fullname, password):
         self.id = id
@@ -19,7 +17,6 @@ class User:
         self.password = password
     
     def is_active(self):
-        # For simplicity, assuming all users are active.
         return True
     
     def get_id(self):
@@ -34,13 +31,11 @@ class User:
             'password': self.password
         }
 
-# Save users to the JSON file
 def save_users(users):
     users_dict = {username: user.to_dict() for username, user in users.items()}
     with open(USERS_FILE, 'w') as file:
         json.dump(users_dict, file)
 
-# Load existing users from the JSON file
 def load_users():
     try:
         with open(USERS_FILE, 'r') as file:
@@ -89,21 +84,17 @@ def SignUp():
         email = request.form.get('email')
         fullname = request.form.get('fullname')
         
-        # Check if the username already exists
         if username in users:
             return render_template('SignUp.html', error='Username already exists')
 
-        # Create a new user
-        user_id = str(len(users) + 1)  # Generate a new user ID
+        user_id = str(len(users) + 1)  
         new_user = User(user_id, username, email, fullname, password)
         
-        # Add the new user to the database
         users[username] = new_user
         
-        # Save users to the JSON file
         save_users(users)
         
-        return redirect('/')  # Redirect to the home page after successful sign up
+        return redirect('/')  
     else:
         return render_template('SignUp.html')
     

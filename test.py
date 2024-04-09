@@ -1,6 +1,6 @@
 import unittest
-from app import app
-from flask_login import login_user
+from app import app, users, save_users
+from flask_login import login_user, logout_user
 
 class TestAppRoutes(unittest.TestCase):
 
@@ -32,15 +32,38 @@ class TestAppRoutes(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn(b'Cybersecurity', response.data)
 
-    def test_profile_route_authenticated(self):
-        # Simulate a logged-in user session
-        with self.app as c:
-            with c.session_transaction() as sess:
-                sess['_user_id'] = 'example_user'  # Simulate the user ID in the session
-        # Access the profile route
-        response = self.app.get('/profile')
-        self.assertEqual(response.status_code, 200)
-        self.assertIn(b'User Profile', response.data)
+    def test_login_functionality(self):
+        with self.app as client:
+            response = client.post('/login', data=dict(username='testuser', password='password'), follow_redirects=True)
+            self.assertEqual(response.status_code, 200)
+            self.assertIn(b'QCareers', response.data)  
+
+            response = client.post('/login', data=dict(username='testuser', password='wrongpassword'), follow_redirects=True)
+            self.assertIn(b'Invalid username or password', response.data)
+
+    def test_logout_functionality(self):
+        with self.app as client:
+            login_user(users['user1'])
+            response = client.get('/logout', follow_redirects=True)
+            self.assertNotIn(b'user1', response.data) 
+
+    def test_signup_functionality(self):
+        with self.app as client:
+            response = client.post('/SignUp', data=dict(username='newuser', password='password', email='newuser@example.com', fullname='New User'), follow_redirects=True)
+            self.assertEqual(response.status_code, 200)
+            self.assertIn(b'QCareers', response.data) 
+
+            response = client.post('/SignUp', data=dict(username='testuser', password='password', email='test@example.com', fullname='Test User'), follow_redirects=True)
+            self.assertIn(b'Username already exists', response.data)
+
+    def test_session_management(self):
+        with self.app as client:
+            response = client.get('/infotechjobs', follow_redirects=False)
+            self.assertEqual(response.status_code, 302)  
+
+            login_user(users['user1'])
+            response = client.get('/infotechjobs', follow_redirects=True)
+            self.assertEqual(response.status_code, 200)
 
 if __name__ == '__main__':
     unittest.main()
