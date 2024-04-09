@@ -1,6 +1,7 @@
 import unittest
 from app import app, users, save_users
 from flask_login import login_user, logout_user
+from flask import session
 
 class TestAppRoutes(unittest.TestCase):
 
@@ -43,9 +44,12 @@ class TestAppRoutes(unittest.TestCase):
 
     def test_logout_functionality(self):
         with self.app as client:
-            login_user(users['user1'])
-            response = client.get('/logout', follow_redirects=True)
-            self.assertNotIn(b'user1', response.data) 
+            with app.app_context():
+                login_user(users['user1'])
+                session['username'] = users['user1'].username
+                response = client.get('/logout', follow_redirects=True)
+                self.assertNotIn(b'user1', response.data)
+                self.assertNotIn('username', session)  # Check if username is removed from session
 
     def test_signup_functionality(self):
         with self.app as client:
@@ -61,9 +65,11 @@ class TestAppRoutes(unittest.TestCase):
             response = client.get('/infotechjobs', follow_redirects=False)
             self.assertEqual(response.status_code, 302)  
 
-            login_user(users['user1'])
-            response = client.get('/infotechjobs', follow_redirects=True)
-            self.assertEqual(response.status_code, 200)
+            with app.app_context():
+                login_user(users['user1'])
+                session['username'] = users['user1'].username
+                response = client.get('/infotechjobs', follow_redirects=True)
+                self.assertEqual(response.status_code, 200)
 
 if __name__ == '__main__':
     unittest.main()
