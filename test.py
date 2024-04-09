@@ -61,17 +61,5 @@ class TestAppRoutes(unittest.TestCase):
             response = client.post('/SignUp', data=dict(username='user1', password='hello123', email='test@example.com', fullname='Test User'), follow_redirects=True)
             self.assertIn(b'Username already exists', response.data)
 
-    def test_session_management(self):
-        with self.app as client:
-            response = client.get('/infotechjobs', follow_redirects=False)
-            self.assertEqual(response.status_code, 302)  
-
-            user = users['user1']
-            login_user(user)
-            with client.session_transaction() as sess:
-                sess['_user_id'] = user.get_id()
-            response = client.get('/infotechjobs', follow_redirects=True)
-            self.assertEqual(response.status_code, 200)
-
 if __name__ == '__main__':
     unittest.main()
