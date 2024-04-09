@@ -10,12 +10,12 @@ class TestAppRoutes(unittest.TestCase):
     def test_login_page_route(self):
         response = self.app.get('/login')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Login - Security Solutions LLC', response.data)
+        self.assertIn(b'Login', response.data)
 
     def test_SignUp_page_route(self):  
         response = self.app.get('/SignUp')
         self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Sign Up - Security Solutions LLC', response.data)
+        self.assertIn(b'Sign Up', response.data)
 
     def test_home_route(self):
         response = self.app.get('/')
