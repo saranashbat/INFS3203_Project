@@ -49,3 +49,23 @@ The following is an outline of the tools that will be utilized for this project:
 **Conclusion**
 
 This project proposal presents a viable solution to streamline the job search process in Qatar through the development of a user-friendly job search application. By utilizing Flask for web development and tools like Figma for design, we aim to create an accessible platform that provides comprehensive job information to users. This project aligns closely with Qatar's National Development Strategy, particularly Goal 3: Future-ready Workforce, as it facilitates access to employment opportunities and empowers individuals with essential information to enhance their employability. Our objective is to make a significant impact on Qatar's job market landscape, fostering economic growth and social development in the process.
+
+
+
+
+
+**Work Distribution**
+
+
+Our group began by forming a team comprised of Sara and myself, Heba. 
+Together, we established a repository named "INFS3203_Project" and commenced discussing the core aspects of our project. 
+We started by brainstorming the project idea, outlining its main features. Afterwards, we crafted a README file to articulate our project proposal, 
+dividing the workload accordingly. The initial section, covering the Introduction, Qatar National Development Strategy, and Identification of Need, 
+was expertly handled by me, Heba. Subsequently, Sara took charge of the second section, which encompassed the Project Proposal, Potential Impact, Project Plan, and Conclusion.
+
+Upon finalizing the proposal, we transitioned seamlessly into the coding phase. We structured a main repository and designated individual branches for each team member 
+to work on their respective tasks. This approach allowed us to minimize conflicts during the merging process. Sara skillfully managed tasks related to index and info jobs, 
+while I, Heba, tackled the login and signup functionalities. After integrating our work and meticulously addressing any bugs, 
+we ensured that both the code and README file were impeccably organized. As a result, our project is fully functional and free from any issues, 
+showcasing our collaborative effort and dedication to excellence.
+
