@@ -45,7 +45,6 @@ For this project, Flask will be used as the web development framework, while HTM
 The following is an outline of the tools that will be utilized for this project:
 - Figma: design tool for creating prototypes.
 - Visual Studio Code: development tool
-- Netlify: tool for hosting sites.
 
 **Conclusion**
 
